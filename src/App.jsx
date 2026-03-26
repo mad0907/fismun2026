@@ -41,7 +41,7 @@ const COC_RULES = [
 function LogoWatermark({ dim = false, size = 'min(560px, 84vw)' }) {
   return (
     <div className={`logo-wm${dim ? ' logo-wm-dim' : ''}`} style={{ '--lw': size }}>
-      <img src="/logo.png" alt="" className="logo-wm-img" />
+      <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" className="logo-wm-img" />
       <div className="logo-wm-scanlines" />
       <div className="logo-wm-glow" />
     </div>
