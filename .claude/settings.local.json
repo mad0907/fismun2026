@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import shutil; shutil.copy\\(\"\"/Users/munmundas/Documents/fismun2026/FISMUN\\\\u201926.pdf\"\", \"\"/tmp/FISMUN26.pdf\"\"\\)\")",
+      "Bash(python3 -c \":*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
