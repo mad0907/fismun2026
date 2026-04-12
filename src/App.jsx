@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from 'react'
-import { motion, AnimatePresence, useMotionValue, animate, useInView } from 'framer-motion'
+import { motion, AnimatePresence, animate, useInView } from 'framer-motion'
 import CommitteeCard from './components/CommitteeCard'
 import Globe from './components/Globe'
 
@@ -8,15 +8,51 @@ const CONF_DATE = '2026-06-26T09:00:00'
 
 // ─── DATA ─────────────────────────────────────────────────────
 const COMMITTEES = [
-  { abbr: 'UNSC',   fullName: 'United Nations Security Council',     chairs: ['Krishna Iyer', 'Devansh', 'Aarnav Tejaswi'], agenda: null },
-  { abbr: 'UNHRC',  fullName: 'United Nations Human Rights Council', chairs: ['Sarah', 'Anish G', 'Kenrick'],               agenda: null },
-  { abbr: 'AIPPM',  fullName: 'All India Political Parties Meet',    chairs: ['Aarav Motreja', 'Anirudh R', 'Shashank Srinath'], agenda: null },
-  { abbr: 'CCC',    fullName: 'Continuous Crisis Committee',         chairs: ['Kaustubh Krishna', 'Nathan Daniel'],          agenda: null },
-  { abbr: 'DISEC',  fullName: 'Disarmament and Security Council',   chairs: ['Aabid Maldar', 'Dhruv Kulkarni', 'Puneet'],    agenda: null },
-  { abbr: 'UNICEF', fullName: "United Nations Children's Fund",     chairs: ['Aara Shivani', 'Srishti Singh', 'Rohan'],      agenda: null },
-  { abbr: 'UNEP',   fullName: 'UN Environment Programme',           chairs: [], agenda: 'To Be Announced' },
-  { abbr: 'WHO',    fullName: 'World Health Organization',           chairs: [], agenda: 'To Be Announced' },
-  { abbr: 'HCC',    fullName: 'Historical Crisis Committee',         chairs: [], agenda: 'To Be Announced' },
+  {
+    abbr: 'UNSC', fullName: 'United Nations Security Council',
+    chairs: ['Krishna Iyer', 'Devansh', 'Aarnav Tejaswi'], agenda: null,
+    description: 'The United Nations Security Council is the most powerful body within the UN system, bearing primary responsibility for the maintenance of international peace and security. At FISMUN\'26, delegates will simulate the deliberations of the 15-member council — navigating vetoes, drafting binding resolutions, and confronting crises that demand decisive multilateral action.',
+  },
+  {
+    abbr: 'UNHRC', fullName: 'United Nations Human Rights Council',
+    chairs: ['Sarah', 'Anish G', 'Kenrick'], agenda: null,
+    description: 'The United Nations Human Rights Council is the principal UN intergovernmental body responsible for strengthening the promotion and protection of human rights around the globe. Delegates will engage with contemporary violations, draft policy frameworks, and debate the balance between state sovereignty and universal human dignity.',
+  },
+  {
+    abbr: 'AIPPM', fullName: 'All India Political Parties Meet',
+    chairs: ['Aarav Motreja', 'Anirudh R', 'Shashank Srinath'], agenda: null,
+    description: 'The All India Political Parties Meet simulates the unique and dynamic landscape of Indian parliamentary democracy. Delegates represent major national and regional political parties, debating pressing domestic policy issues — from economic reform and social justice to national security and federalism — in a distinctly Indian legislative style.',
+  },
+  {
+    abbr: 'CCC', fullName: 'Continuous Crisis Committee',
+    chairs: ['Kaustubh Krishna', 'Nathan Daniel'], agenda: null,
+    description: 'The Continuous Crisis Committee is a fast-paced, dynamic simulation where the situation evolves in real time. Delegates must respond to rapid developments, shifting alliances, and unexpected crises introduced by the crisis staff throughout the session. Adaptability, strategic thinking, and quick decision-making are the hallmarks of a successful CCC delegate.',
+  },
+  {
+    abbr: 'DISEC', fullName: 'Disarmament and Security Council',
+    chairs: ['Aabid Maldar', 'Dhruv Kulkarni', 'Puneet'], agenda: null,
+    description: 'The Disarmament and Security Council addresses some of the most pressing threats to global stability — from the proliferation of weapons of mass destruction to conventional arms trafficking and emerging technologies in warfare. Delegates will craft frameworks for arms control, non-proliferation treaties, and cooperative security measures.',
+  },
+  {
+    abbr: 'UNICEF', fullName: "United Nations Children's Fund",
+    chairs: ['Aara Shivani', 'Srishti Singh', 'Rohan'], agenda: null,
+    description: "UNICEF works in over 190 countries and territories to protect the rights of every child. At FISMUN'26, delegates will tackle critical issues affecting the world's most vulnerable population — including child labour, access to education, child soldiers, malnutrition, and the impact of conflict on children's welfare.",
+  },
+  {
+    abbr: 'UNEP', fullName: 'UN Environment Programme',
+    chairs: [], agenda: 'To Be Announced',
+    description: 'The United Nations Environment Programme is the leading global authority on the environment. Delegates will address urgent environmental challenges including climate change mitigation, biodiversity loss, plastic pollution, and the transition to sustainable energy — working towards a future where humanity thrives in harmony with nature.',
+  },
+  {
+    abbr: 'WHO', fullName: 'World Health Organization',
+    chairs: [], agenda: 'To Be Announced',
+    description: 'The World Health Organization directs and coordinates international health within the United Nations system. Delegates will engage with global health crises, pandemic preparedness, equitable vaccine distribution, mental health policy, and the structural inequalities that determine health outcomes across nations.',
+  },
+  {
+    abbr: 'HCC', fullName: 'Historical Crisis Committee',
+    chairs: [], agenda: 'To Be Announced',
+    description: "The Historical Crisis Committee places delegates in the shoes of historical decision-makers at a pivotal moment in history. With the benefit of hindsight stripped away, delegates must navigate the pressures, limited information, and competing interests of the era — reimagining how history's most defining crises could have unfolded differently.",
+  },
 ]
 
 const STATS = [
@@ -392,33 +428,128 @@ function Stats() {
   )
 }
 
+// ─── COMMITTEE DETAIL OVERLAY ─────────────────────────────────
+function CommitteeDetail({ committee, onClose }) {
+  // Lock body scroll while open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    const onKey = e => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', onKey) }
+  }, [onClose])
+
+  return (
+    <motion.div
+      className="cd-overlay"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="cd-panel"
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'spring', stiffness: 320, damping: 38, mass: 0.9 }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Close button */}
+        <button className="cd-close" onClick={onClose} aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+
+        {/* Header */}
+        <div className="cd-header">
+          <div className="cd-abbr">{committee.abbr}</div>
+          <div className="cd-fullname">{committee.fullName}</div>
+          <div className="cd-divider" />
+        </div>
+
+        {/* Description */}
+        <p className="cd-description">{committee.description}</p>
+
+        {/* Executive Board */}
+        {committee.chairs?.length > 0 && (
+          <div className="cd-section">
+            <div className="cd-section-lbl">Executive Board</div>
+            <div className="cd-chips">
+              {committee.chairs.map(name => (
+                <span key={name} className="c-chip">{name}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Agenda */}
+        {committee.agenda && (
+          <div className="cd-section">
+            <div className="cd-section-lbl">Agenda</div>
+            <p className="cd-agenda">{committee.agenda}</p>
+          </div>
+        )}
+
+        {/* Action buttons */}
+        <div className="cd-actions">
+          <button className="cd-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            View Matrix
+          </button>
+          <button className="cd-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            View Background Guide
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 // ─── PAGE 4: COMMITTEES (with glass spheres) ──────────────────
 function Committees() {
+  const [selected, setSelected] = useState(null)
+
   return (
-    <section id="committees" className="committees section">
-      <LogoWatermark dim size="min(380px, 58vw)" />
+    <>
+      <section id="committees" className="committees section">
+        <LogoWatermark dim size="min(380px, 58vw)" />
 
-      {/* Decorative glass spheres — reference glassmorphism aesthetic */}
-      <div className="committee-orbs" aria-hidden="true">
-        <div className="orb orb-1" />
-        <div className="orb orb-2" />
-        <div className="orb orb-3" />
-        <div className="orb orb-4" />
-        <div className="orb orb-5" />
-        <div className="orb orb-6" />
-      </div>
+        {/* Decorative glass spheres — reference glassmorphism aesthetic */}
+        <div className="committee-orbs" aria-hidden="true">
+          <div className="orb orb-1" />
+          <div className="orb orb-2" />
+          <div className="orb orb-3" />
+          <div className="orb orb-4" />
+          <div className="orb orb-5" />
+          <div className="orb orb-6" />
+        </div>
 
-      <div className="committees-content">
-        <FadeUp><h2 className="section-title">INTRODUCING THE COMMITTEES</h2></FadeUp>
-        <motion.div className="committees-grid"
-          initial="hidden" whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={{ visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } } }}
-        >
-          {COMMITTEES.map((c, i) => <CommitteeCard key={c.abbr} committee={c} index={i} />)}
-        </motion.div>
-      </div>
-    </section>
+        <div className="committees-content">
+          <FadeUp><h2 className="section-title">INTRODUCING THE COMMITTEES</h2></FadeUp>
+          <motion.div className="committees-grid"
+            initial="hidden" whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } } }}
+          >
+            {COMMITTEES.map((c, i) => (
+              <CommitteeCard key={c.abbr} committee={c} index={i} onClick={() => setSelected(c)} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <AnimatePresence>
+        {selected && <CommitteeDetail committee={selected} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
+    </>
   )
 }
 

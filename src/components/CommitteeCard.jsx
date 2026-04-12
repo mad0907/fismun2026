@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform, useMotionTemplate, useSpring } fr
 // Detect touch-only devices — disable 3D tilt on mobile
 const isTouch = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
 
-export default function CommitteeCard({ committee, index }) {
+export default function CommitteeCard({ committee, index, onClick }) {
   const cardRef = useRef(null)
 
   const mx = useMotionValue(0)
@@ -38,13 +38,17 @@ export default function CommitteeCard({ committee, index }) {
   const onLeave = useCallback(() => { mx.set(0); my.set(0) }, [mx, my])
 
   const tiltStyle = isTouch
-    ? {}
-    : { rotateX: rotX, rotateY: rotY, transformPerspective: 1100 }
+    ? { cursor: 'pointer' }
+    : { rotateX: rotX, rotateY: rotY, transformPerspective: 1100, cursor: 'pointer' }
 
   return (
     <motion.article
       ref={cardRef}
       className="c-card"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onClick?.() }}
       variants={{
         hidden:  { opacity: 0, y: 50, scale: 0.88, filter: 'blur(8px)' },
         visible: { opacity: 1, y: 0,  scale: 1.00, filter: 'blur(0px)',
@@ -100,6 +104,8 @@ export default function CommitteeCard({ committee, index }) {
             <p className="c-agenda-txt">{committee.agenda}</p>
           </>
         )}
+
+        <div className="c-learn-more">Learn More →</div>
       </div>
     </motion.article>
   )
