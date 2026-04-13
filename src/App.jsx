@@ -10,47 +10,84 @@ const CONF_DATE = '2026-06-26T09:00:00'
 const COMMITTEES = [
   {
     abbr: 'UNSC', fullName: 'United Nations Security Council',
-    chairs: ['Krishna Iyer', 'Devansh', 'Aarnav Tejaswi'], agenda: null,
+    board: [
+      { role: 'Co-Chairperson', name: 'Krishna Iyer' },
+      { role: 'Co-Chairperson', name: 'Anish G' },
+      { role: 'Moderator', name: 'Aarnav Tejaswi' },
+    ], agenda: null,
     description: 'The United Nations Security Council is the most powerful body within the UN system, bearing primary responsibility for the maintenance of international peace and security. At FISMUN\'26, delegates will simulate the deliberations of the 15-member council — navigating vetoes, drafting binding resolutions, and confronting crises that demand decisive multilateral action.',
   },
   {
     abbr: 'UNHRC', fullName: 'United Nations Human Rights Council',
-    chairs: ['Sarah', 'Anish G', 'Kenrick'], agenda: null,
+    board: [
+      { role: 'Co-Chairperson', name: 'Kaushiik' },
+      { role: 'Co-Chairperson', name: 'Avaneesh' },
+      { role: 'Vice Chairperson', name: 'Puneet' },
+      { role: 'Moderator', name: 'Kenrick Roy' },
+    ], agenda: null,
     description: 'The United Nations Human Rights Council is the principal UN intergovernmental body responsible for strengthening the promotion and protection of human rights around the globe. Delegates will engage with contemporary violations, draft policy frameworks, and debate the balance between state sovereignty and universal human dignity.',
   },
   {
     abbr: 'AIPPM', fullName: 'All India Political Parties Meet',
-    chairs: ['Aarav Motreja', 'Anirudh R', 'Shashank Srinath'], agenda: null,
+    board: [
+      { role: 'Co-Chairperson', name: 'Aarav Motreja' },
+      { role: 'Co-Chairperson', name: 'Anirudh R' },
+      { role: 'Vice Chairperson', name: 'Shashank' },
+    ], agenda: null,
     description: 'The All India Political Parties Meet simulates the unique and dynamic landscape of Indian parliamentary democracy. Delegates represent major national and regional political parties, debating pressing domestic policy issues — from economic reform and social justice to national security and federalism — in a distinctly Indian legislative style.',
   },
   {
     abbr: 'CCC', fullName: 'Continuous Crisis Committee',
-    chairs: ['Kaustubh Krishna', 'Nathan Daniel'], agenda: null,
+    board: [
+      { role: 'Co-Chairperson', name: 'Kaustubh Krishna' },
+      { role: 'Co-Chairperson', name: 'Shreyas DB' },
+      { role: 'Vice Chairperson', name: 'Nathan Daniel' },
+    ], agenda: null,
     description: 'The Continuous Crisis Committee is a fast-paced, dynamic simulation where the situation evolves in real time. Delegates must respond to rapid developments, shifting alliances, and unexpected crises introduced by the crisis staff throughout the session. Adaptability, strategic thinking, and quick decision-making are the hallmarks of a successful CCC delegate.',
   },
   {
     abbr: 'DISEC', fullName: 'Disarmament and Security Council',
-    chairs: ['Aabid Maldar', 'Dhruv Kulkarni', 'Puneet'], agenda: null,
+    board: [
+      { role: 'Co-Chairperson', name: 'Aabid Maldar' },
+      { role: 'Co-Chairperson', name: 'Ritobrata Sarkar' },
+      { role: 'Vice Chairperson', name: 'Dhruv Kulkarni' },
+    ], agenda: null,
     description: 'The Disarmament and Security Council addresses some of the most pressing threats to global stability — from the proliferation of weapons of mass destruction to conventional arms trafficking and emerging technologies in warfare. Delegates will craft frameworks for arms control, non-proliferation treaties, and cooperative security measures.',
   },
   {
-    abbr: 'UNICEF', fullName: "United Nations Children's Fund",
-    chairs: ['Aara Shivani', 'Srishti Singh', 'Rohan'], agenda: null,
+    abbr: 'UNICEF', fullName: "United Nations Children's Fund (Junior)",
+    board: [
+      { role: 'Co-Chairperson', name: 'Aara Shivani' },
+      { role: 'Co-Chairperson', name: 'Srishti Singh' },
+      { role: 'Moderator', name: 'Rohan' },
+    ], agenda: null,
     description: "UNICEF works in over 190 countries and territories to protect the rights of every child. At FISMUN'26, delegates will tackle critical issues affecting the world's most vulnerable population — including child labour, access to education, child soldiers, malnutrition, and the impact of conflict on children's welfare.",
   },
   {
-    abbr: 'UNEP', fullName: 'UN Environment Programme',
-    chairs: [], agenda: 'To Be Announced',
-    description: 'The United Nations Environment Programme is the leading global authority on the environment. Delegates will address urgent environmental challenges including climate change mitigation, biodiversity loss, plastic pollution, and the transition to sustainable energy — working towards a future where humanity thrives in harmony with nature.',
-  },
-  {
-    abbr: 'WHO', fullName: 'World Health Organization',
-    chairs: [], agenda: 'To Be Announced',
+    abbr: 'WHO', fullName: 'World Health Organization (Junior)',
+    board: [
+      { role: 'Co-Chairperson', name: 'Jerome Noble' },
+      { role: 'Co-Chairperson', name: 'Saniya Philip' },
+      { role: 'Moderator', name: 'Arjun' },
+    ], agenda: 'To Be Announced',
     description: 'The World Health Organization directs and coordinates international health within the United Nations system. Delegates will engage with global health crises, pandemic preparedness, equitable vaccine distribution, mental health policy, and the structural inequalities that determine health outcomes across nations.',
   },
   {
+    abbr: 'UNCSW', fullName: 'UN Commission on the Status of Women',
+    board: [
+      { role: 'Head Chairperson', name: 'Atul' },
+      { role: 'Vice Chairperson', name: 'Suhani' },
+      { role: 'Moderator', name: 'Muskaan' },
+    ], agenda: 'To Be Announced',
+    description: 'The UN Commission on the Status of Women is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. Delegates will address systemic barriers, legislative gaps, and social norms that perpetuate inequality across the globe.',
+  },
+  {
     abbr: 'HCC', fullName: 'Historical Crisis Committee',
-    chairs: [], agenda: 'To Be Announced',
+    board: [
+      { role: 'Co-Chairperson', name: 'Shlok Shetty' },
+      { role: 'Co-Chairperson', name: 'Shubh Bansal' },
+      { role: 'Moderator', name: 'Teesha' },
+    ], agenda: 'To Be Announced',
     description: "The Historical Crisis Committee places delegates in the shoes of historical decision-makers at a pivotal moment in history. With the benefit of hindsight stripped away, delegates must navigate the pressures, limited information, and competing interests of the era — reimagining how history's most defining crises could have unfolded differently.",
   },
 ]
@@ -58,8 +95,8 @@ const COMMITTEES = [
 const STATS = [
   { target: 4,   suffix: 'th', label: 'Edition'            },
   { target: 9,   suffix: '',   label: 'Committees'         },
-  { target: 200, suffix: '+',  label: 'Expected Delegates' },
-  { target: 2,   suffix: '',   label: 'Days of Debate'     },
+  { target: 350, suffix: '+',  label: 'Expected Delegates' },
+  { target: 3,   suffix: '',   label: 'Days of Debate'     },
 ]
 
 const COC_RULES = [
@@ -209,7 +246,7 @@ const NAV_LINKS = [
   { id: 'hero',        label: 'Home'         },
   { id: 'secretariat', label: 'About'        },
   { id: 'committees',  label: 'Committees'   },
-  { id: 'coc',         label: 'Conduct'      },
+  { id: 'coc',         label: 'Resources'    },
   { id: 'register',    label: 'Register'     },
 ]
 function Nav() {
@@ -284,7 +321,7 @@ function Hero() {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ delay: 3.3, duration: 0.6 }}
         >
-          26 June 2026
+          26 June – 28 June 2026
         </motion.div>
       </div>
 
@@ -305,15 +342,7 @@ function Secretariat() {
           <h2 className="section-title">LETTER FROM THE SECRETARIAT</h2>
         </FadeUp>
         <div className="sec-layout">
-          <FadeUp delay={0.1} className="sec-avatar-col">
-            <div className="avatar-card">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="avatar-svg">
-                <circle cx="40" cy="28" r="18" fill="#4A8FE2" opacity="0.9" />
-                <path d="M10 78 C10 58 70 58 70 78" fill="#4A8FE2" opacity="0.9" />
-              </svg>
-            </div>
-          </FadeUp>
-          <FadeUp delay={0.18} className="letter-card">
+          <FadeUp delay={0.1} className="letter-card">
             <div className="letter-quote">"</div>
             <p className="letter-body">
               Dear Delegates,
@@ -335,7 +364,11 @@ function Secretariat() {
               We look forward to witnessing the brilliance you bring to every
               committee session. Welcome to FISMUN'26.
             </p>
-            <p className="letter-sig">— The Secretariat, FISMUN'26</p>
+            <div className="letter-sigs">
+              <div className="letter-sig-item"><span className="letter-sig-name">Ishaan Gowda</span><span className="letter-sig-role">Secretary General</span></div>
+              <div className="letter-sig-item"><span className="letter-sig-name">Sarah Susan</span><span className="letter-sig-role">Deputy Secretary General</span></div>
+              <div className="letter-sig-item"><span className="letter-sig-name">Gaurav Shetty</span><span className="letter-sig-role">Director General</span></div>
+            </div>
           </FadeUp>
         </div>
       </div>
@@ -473,12 +506,15 @@ function CommitteeDetail({ committee, onClose }) {
         <p className="cd-description">{committee.description}</p>
 
         {/* Executive Board */}
-        {committee.chairs?.length > 0 && (
+        {committee.board?.length > 0 && (
           <div className="cd-section">
             <div className="cd-section-lbl">Executive Board</div>
-            <div className="cd-chips">
-              {committee.chairs.map(name => (
-                <span key={name} className="c-chip">{name}</span>
+            <div className="cd-board">
+              {committee.board.map(m => (
+                <div key={m.name} className="cd-board-row">
+                  <span className="cd-board-role">{m.role}</span>
+                  <span className="cd-board-name">{m.name}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -553,28 +589,102 @@ function Committees() {
   )
 }
 
-// ─── CODE OF CONDUCT ──────────────────────────────────────────
-function CodeOfConduct() {
+// ─── COC MODAL ────────────────────────────────────────────────
+function CocModal({ onClose }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    const onKey = e => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', onKey) }
+  }, [onClose])
   return (
-    <section id="coc" className="coc section page-section">
-      <LogoWatermark dim size="min(460px, 72vw)" />
-      <div className="coc-inner">
-        <FadeUp>
-          <div className="coc-badge">Conference Protocol</div>
-          <h2 className="section-title">CODE OF CONDUCT</h2>
-        </FadeUp>
-        <div className="coc-grid">
+    <motion.div className="cd-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} onClick={onClose}>
+      <motion.div className="cd-panel" initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }} transition={{ type: 'spring', stiffness: 320, damping: 38, mass: 0.9 }} onClick={e => e.stopPropagation()}>
+        <button className="cd-close" onClick={onClose} aria-label="Close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+        </button>
+        <div className="cd-header">
+          <div className="cd-abbr">CODE OF CONDUCT</div>
+          <div className="cd-divider" />
+        </div>
+        <div className="coc-modal-grid">
           {COC_RULES.map((r, i) => (
-            <FadeUp key={r.num} delay={i * 0.055}>
-              <div className="coc-item">
-                <div className="coc-num">{r.num}</div>
-                <p className="coc-rule">{r.text}</p>
-              </div>
-            </FadeUp>
+            <motion.div key={r.num} className="coc-item"
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.04, duration: 0.4, ease: [0.22,1,0.36,1] }}
+            >
+              <div className="coc-num">{r.num}</div>
+              <p className="coc-rule">{r.text}</p>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+// ─── RESOURCES ────────────────────────────────────────────────
+const RESOURCE_TOP = [
+  { emoji: '🌍', label: 'Country Matrix',    key: 'matrix' },
+  { emoji: '📋', label: 'Code of Conduct',   key: 'coc' },
+]
+
+function Resources() {
+  const [cocOpen, setCocOpen] = useState(false)
+  return (
+    <>
+      <section id="coc" className="resources section page-section">
+        <LogoWatermark dim size="min(460px, 72vw)" />
+        <div className="resources-inner">
+          <FadeUp><h2 className="section-title">DELEGATE RESOURCES</h2></FadeUp>
+
+          {/* Top row — Country Matrix + Code of Conduct */}
+          <FadeUp delay={0.08}>
+            <div className="res-top-row">
+              {RESOURCE_TOP.map(r => (
+                <motion.button
+                  key={r.key}
+                  className="res-card"
+                  onClick={r.key === 'coc' ? () => setCocOpen(true) : undefined}
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 360, damping: 22 }}
+                >
+                  <span className="res-card-emoji">{r.emoji}</span>
+                  <span className="res-card-label">{r.label}</span>
+                </motion.button>
+              ))}
+            </div>
+          </FadeUp>
+
+          {/* Background Guides */}
+          <FadeUp delay={0.14}><h3 className="res-sub-title">Background Guides</h3></FadeUp>
+          <motion.div className="res-bg-grid"
+            initial="hidden" whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } } }}
+          >
+            {COMMITTEES.map(c => (
+              <motion.button
+                key={c.abbr}
+                className="res-bg-card"
+                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22,1,0.36,1] } } }}
+                whileHover={{ scale: 1.03, y: -4 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: 'spring', stiffness: 360, damping: 22 }}
+              >
+                <div className="res-bg-card-inner">
+                  <span className="res-bg-abbr">{c.abbr}</span>
+                  <span className="res-bg-full">{c.fullName}</span>
+                </div>
+                <span className="res-bg-arrow">→</span>
+              </motion.button>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+      <AnimatePresence>{cocOpen && <CocModal onClose={() => setCocOpen(false)} />}</AnimatePresence>
+    </>
   )
 }
 
@@ -656,16 +766,8 @@ function Register() {
   return (
     <section id="register" className="register section page-section">
       <div className="register-inner">
-        <FadeUp>
-          <motion.div className="register-badge"
-            animate={{ boxShadow: ['0 0 0 0 rgba(74,143,226,0.5)', '0 0 0 10px rgba(74,143,226,0)', '0 0 0 0 rgba(74,143,226,0)'] }}
-            transition={{ repeat: Infinity, duration: 2.6, ease: 'easeOut' }}
-          >
-            Open Registration · 26 June 2026
-          </motion.div>
-        </FadeUp>
         <FadeUp delay={0.08}><h2 className="register-title">STEP INTO<br />DIPLOMACY</h2></FadeUp>
-        <FadeUp delay={0.16}><p className="register-sub">Join delegates from across the country for two days of world-class debate and diplomacy</p></FadeUp>
+        <FadeUp delay={0.16}><p className="register-sub">Join delegates from across the country for three days of world-class debate and diplomacy</p></FadeUp>
         <FadeUp delay={0.24}>
           <motion.a href="#" className="btn-register"
             whileHover={{ scale: 1.04, y: -4 }} whileTap={{ scale: 0.97 }}
@@ -686,7 +788,7 @@ function Footer() {
     <footer className="footer" id="footer-contact">
       <div><div className="footer-logo">FISMUN'26</div><div className="footer-tag">26 June 2026 · Bigger · Better · Bolder</div></div>
       <div className="footer-links">
-        {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Conduct','coc'],['Register','register']].map(([l,id]) => (
+        {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register']].map(([l,id]) => (
           <a key={l} href={`#${id}`} className="footer-link">{l}</a>
         ))}
       </div>
@@ -722,7 +824,7 @@ export default function App() {
         <Countdown />     {/* PDF page 3 */}
         <Stats />
         <Committees />    {/* PDF page 4 */}
-        <CodeOfConduct />
+        <Resources />
         <Register />
       </main>
       <Footer />

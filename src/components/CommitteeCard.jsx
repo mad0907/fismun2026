@@ -87,12 +87,12 @@ export default function CommitteeCard({ committee, index, onClick }) {
         <div className="c-full">{committee.fullName}</div>
         <div className="c-divider" />
 
-        {committee.chairs?.length > 0 && (
+        {committee.board?.length > 0 && (
           <>
             <div className="c-section-lbl">Executive Board</div>
             <div className="c-chips">
-              {committee.chairs.map(name => (
-                <span key={name} className="c-chip">{name}</span>
+              {committee.board.map(m => (
+                <span key={m.name} className="c-chip">{m.name}</span>
               ))}
             </div>
           </>
