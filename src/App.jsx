@@ -20,8 +20,8 @@ const COMMITTEES = [
   {
     abbr: 'UNHRC', fullName: 'United Nations Human Rights Council',
     board: [
-      { role: 'Co-Chairperson', name: 'Kaushiik' },
-      { role: 'Co-Chairperson', name: 'Avaneesh' },
+      { role: 'Co-Chairperson', name: 'Kaushiik Nair' },
+      { role: 'Co-Chairperson', name: 'Avaneesh Reddy' },
       { role: 'Vice Chairperson', name: 'Puneet' },
       { role: 'Moderator', name: 'Kenrick Roy' },
     ], agenda: null,
@@ -73,13 +73,13 @@ const COMMITTEES = [
     description: 'The World Health Organization directs and coordinates international health within the United Nations system. Delegates will engage with global health crises, pandemic preparedness, equitable vaccine distribution, mental health policy, and the structural inequalities that determine health outcomes across nations.',
   },
   {
-    abbr: 'UNCSW', fullName: 'UN Commission on the Status of Women',
+    abbr: 'UNCSW', fullName: 'United Nations Commission on the Status of Women',
     board: [
-      { role: 'Head Chairperson', name: 'Atul' },
-      { role: 'Vice Chairperson', name: 'Suhani' },
-      { role: 'Moderator', name: 'Muskaan' },
+      { role: 'Head Chairperson', name: 'Atul Tharian' },
+      { role: 'Vice Chairperson', name: 'Suhani Bhuwania' },
+      { role: 'Moderator', name: 'Muskaan Malik' },
     ], agenda: 'To Be Announced',
-    description: 'The UN Commission on the Status of Women is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. Delegates will address systemic barriers, legislative gaps, and social norms that perpetuate inequality across the globe.',
+    description: 'The United Nations Commission on the Status of Women is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. Delegates will address systemic barriers, legislative gaps, and social norms that perpetuate inequality across the globe.',
   },
   {
     abbr: 'HCC', fullName: 'Historical Crisis Committee',

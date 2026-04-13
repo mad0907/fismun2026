@@ -313,11 +313,15 @@ img, canvas { display: block; }
 /* ─── STATS BAR ──────────────────────────────────────────────── */
 .stats-bar {
   position: relative; z-index: 2;
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: clamp(28px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 4vw, 60px);
   padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 60px);
   border-top: 1px solid var(--cream-12);
   border-bottom: 1px solid var(--cream-12);
+}
+@media (max-width: 560px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: clamp(24px, 6vw, 40px); }
 }
 .stat-item { text-align: center; }
 .stat-num {
