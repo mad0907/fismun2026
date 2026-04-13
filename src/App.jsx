@@ -256,13 +256,28 @@ function Nav() {
   useEffect(() => {
     const fn = () => {
       setStuck(scrollY > 60)
-      const ids = [...NAV_LINKS.map(l => l.id)].reverse()
-      for (const id of ids) { const el = document.getElementById(id); if (el && scrollY >= el.offsetTop - 140) { setActive(id); break } }
+      // Use section-level ids only — 'contact' is a nested div inside 'register'
+      const sectionIds = NAV_LINKS.map(l => l.id === 'contact' ? 'register' : l.id).filter((v, i, a) => a.indexOf(v) === i).reverse()
+      for (const id of sectionIds) {
+        const el = document.getElementById(id)
+        if (el && scrollY >= el.offsetTop - 140) {
+          // Map register back to contact only if scrolled near bottom
+          if (id === 'register') {
+            const contactEl = document.getElementById('contact')
+            if (contactEl && scrollY >= contactEl.offsetTop - 200) { setActive('contact'); break }
+          }
+          setActive(id); break
+        }
+      }
     }
     window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
-  const go = useCallback((e, id) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }, [])
+  const go = useCallback((e, id) => {
+    e.preventDefault()
+    setActive(id)
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
   return (
     <motion.nav className={`nav${stuck ? ' stuck' : ''}`}
       initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }}
