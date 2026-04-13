@@ -248,6 +248,7 @@ const NAV_LINKS = [
   { id: 'committees',  label: 'Committees'   },
   { id: 'coc',         label: 'Resources'    },
   { id: 'register',    label: 'Register'     },
+  { id: 'contact',     label: 'Contact'      },
 ]
 function Nav() {
   const [stuck, setStuck]   = useState(false)
@@ -349,9 +350,9 @@ function Secretariat() {
               <br />
               It is with great warmth and pride that we welcome each one of you to this conference.
               <br />
-              Model United Nations is not just about debate and diplomacy—it is about discovering your voice, learning to listen, and understanding perspectives beyond your own. For some of you, this may be your first conference, and feeling nervous is completely natural. What matters is not perfection, but the willingness to participate and grow.
+              Model United Nations is not just about debate and diplomacy, it is about discovering your voice, learning to listen, and understanding perspectives beyond your own. For some of you, this may be your first conference, and feeling nervous is completely natural. What matters is not perfection, but the willingness to participate and grow.
               <br />
-              For others, this may be another step in your MUN journey, yet each conference brings something new—fresh challenges, new ideas, and moments that stay with you longer than expected. As the Secretariat, we have worked to create an environment where every voice is valued. Often, the most meaningful experiences come not from awards, but from conversations, collaboration, and the small moments in between.
+              For others, this may be another step in your MUN journey, yet each conference brings something new such as fresh challenges, new ideas, and moments that stay with you longer than expected. As the Secretariat, we have worked to create an environment where every voice is valued. Often, the most meaningful experiences come not from awards, but from conversations, collaboration, and the small moments in between.
               <br />
               As you step into committee, be curious, be respectful, and be bold in your own way. Speak when you can, listen when it matters, and most importantly, allow yourself to fully experience this conference.
               <br />
@@ -772,6 +773,49 @@ function Register() {
         <FadeUp delay={0.34}>
           <ShareButtons />
         </FadeUp>
+        <FadeUp delay={0.44}>
+          <div className="contact-section" id="contact">
+            <h3 className="contact-title">CONTACT US</h3>
+            <div className="contact-items">
+              <a href="mailto:freedominternationalschool@gmail.com" className="contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+                freedominternationalschool@gmail.com
+              </a>
+              <a href="https://www.instagram.com/fis.mun?igsh=Z2g5Y29jNDZzeXZ3" target="_blank" rel="noopener noreferrer" className="contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                @fis.mun
+              </a>
+            </div>
+            <a
+              href="https://www.google.com/maps/dir//Freedom+International+School,+C+A+%23+33,+Sector+IV,+HSR+Layout,+Bengaluru,+Karnataka+560102/@12.9007616,77.643776,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae148f631fa5df:0xc30c45871af94d8b!2m2!1d77.6419898!2d12.9165463?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-map-wrap"
+              title="Open in Google Maps"
+            >
+              <iframe
+                className="contact-map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.6419898!3d12.9165463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae148f631fa5df%3A0xc30c45871af94d8b!2sFreedom%20International%20School!5e0!3m2!1sen!2sin!4v1"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Freedom International School"
+              />
+              <div className="contact-map-overlay">
+                <span className="contact-map-cta">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Open in Google Maps
+                </span>
+              </div>
+            </a>
+          </div>
+        </FadeUp>
       </div>
     </section>
   )
@@ -783,7 +827,7 @@ function Footer() {
     <footer className="footer" id="footer-contact">
       <div><div className="footer-logo">FISMUN'26</div><div className="footer-tag">Bigger · Better · Bolder</div></div>
       <div className="footer-links">
-        {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register']].map(([l,id]) => (
+        {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register'],['Contact','contact']].map(([l,id]) => (
           <a key={l} href={`#${id}`} className="footer-link">{l}</a>
         ))}
       </div>
