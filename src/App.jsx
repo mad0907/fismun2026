@@ -253,15 +253,15 @@ const NAV_LINKS = [
 function Nav() {
   const [stuck, setStuck]   = useState(false)
   const [active, setActive] = useState('hero')
+  const locked = useRef(false)
   useEffect(() => {
     const fn = () => {
       setStuck(scrollY > 60)
-      // Use section-level ids only — 'contact' is a nested div inside 'register'
+      if (locked.current) return
       const sectionIds = NAV_LINKS.map(l => l.id === 'contact' ? 'register' : l.id).filter((v, i, a) => a.indexOf(v) === i).reverse()
       for (const id of sectionIds) {
         const el = document.getElementById(id)
         if (el && scrollY >= el.offsetTop - 140) {
-          // Map register back to contact only if scrolled near bottom
           if (id === 'register') {
             const contactEl = document.getElementById('contact')
             if (contactEl && scrollY >= contactEl.offsetTop - 200) { setActive('contact'); break }
@@ -276,6 +276,8 @@ function Nav() {
   const go = useCallback((e, id) => {
     e.preventDefault()
     setActive(id)
+    locked.current = true
+    setTimeout(() => { locked.current = false }, 900)
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }, [])
   return (
