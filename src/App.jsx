@@ -347,22 +347,17 @@ function Secretariat() {
             <p className="letter-body">
               Dear Delegates,
               <br />
-              It is with immense pride and excitement that we welcome you to FISMUN
-              2026 — our fourth edition, and perhaps our most ambitious one yet.
-              This conference represents not just a gathering of young minds, but a
-              testament to what happens when students dare to dream bigger, debate
-              better, and stand bolder.
+              It is with great warmth and pride that we welcome each one of you to this conference.
               <br />
-              At FISMUN, we believe that every voice matters — from the corridors of
-              the Security Council to the chambers of our crisis committees. You are
-              not just participants; you are the architects of tomorrow's world.
+              Model United Nations is not just about debate and diplomacy—it is about discovering your voice, learning to listen, and understanding perspectives beyond your own. For some of you, this may be your first conference, and feeling nervous is completely natural. What matters is not perfection, but the willingness to participate and grow.
               <br />
-              FISMUN'26 pushes boundaries. It is a conference of consequence — where
-              diplomacy is not a performance, but a practice. We challenge every
-              delegate to arrive not just with a position, but with purpose.
+              For others, this may be another step in your MUN journey, yet each conference brings something new—fresh challenges, new ideas, and moments that stay with you longer than expected. As the Secretariat, we have worked to create an environment where every voice is valued. Often, the most meaningful experiences come not from awards, but from conversations, collaboration, and the small moments in between.
               <br />
-              We look forward to witnessing the brilliance you bring to every
-              committee session. Welcome to FISMUN'26.
+              As you step into committee, be curious, be respectful, and be bold in your own way. Speak when you can, listen when it matters, and most importantly, allow yourself to fully experience this conference.
+              <br />
+              We are truly glad to have you here and look forward to the energy and ideas you bring.
+              <br />
+              Warm regards,<br />The Secretariat
             </p>
             <div className="letter-sigs">
               <div className="letter-sig-item"><span className="letter-sig-name">Ishaan Gowda</span><span className="letter-sig-role">Secretary General</span></div>
