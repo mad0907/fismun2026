@@ -786,7 +786,7 @@ function Register() {
 function Footer() {
   return (
     <footer className="footer" id="footer-contact">
-      <div><div className="footer-logo">FISMUN'26</div><div className="footer-tag">26 June 2026 · Bigger · Better · Bolder</div></div>
+      <div><div className="footer-logo">FISMUN'26</div><div className="footer-tag">Bigger · Better · Bolder</div></div>
       <div className="footer-links">
         {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register']].map(([l,id]) => (
           <a key={l} href={`#${id}`} className="footer-link">{l}</a>
