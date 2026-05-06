@@ -14,7 +14,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Krishna Iyer' },
       { role: 'Co-Chairperson', name: 'Anish G' },
       { role: 'Moderator', name: 'Aarnav Tejaswi' },
-    ], agenda: null,
+    ], agenda: 'The Situation in the Middle East',
     description: 'The United Nations Security Council is the most powerful body within the UN system, bearing primary responsibility for the maintenance of international peace and security. At FISMUN\'26, delegates will simulate the deliberations of the 15-member council — navigating vetoes, drafting binding resolutions, and confronting crises that demand decisive multilateral action.',
   },
   {
@@ -24,7 +24,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Avaneesh Reddy' },
       { role: 'Vice Chairperson', name: 'Puneet' },
       { role: 'Moderator', name: 'Kenrick Roy' },
-    ], agenda: null,
+    ], agenda: 'Rights of the "Invisible": Addressing Statelessness and Nationality Deprivation in the Levant and Gulf Regions',
     description: 'The United Nations Human Rights Council is the principal UN intergovernmental body responsible for strengthening the promotion and protection of human rights around the globe. Delegates will engage with contemporary violations, draft policy frameworks, and debate the balance between state sovereignty and universal human dignity.',
   },
   {
@@ -32,8 +32,8 @@ const COMMITTEES = [
     board: [
       { role: 'Co-Chairperson', name: 'Aarav Motreja' },
       { role: 'Co-Chairperson', name: 'Anirudh R' },
-      { role: 'Vice Chairperson', name: 'Shashank' },
-    ], agenda: null,
+      { role: 'Vice Chairperson', name: 'Parth Bakshi' },
+    ], agenda: 'Deliberating upon the standard of bail as set in the Unlawful Activities (Prevention) Act with special reference to cases of national importance',
     description: 'The All India Political Parties Meet simulates the unique and dynamic landscape of Indian parliamentary democracy. Delegates represent major national and regional political parties, debating pressing domestic policy issues — from economic reform and social justice to national security and federalism — in a distinctly Indian legislative style.',
   },
   {
@@ -42,7 +42,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Kaustubh Krishna' },
       { role: 'Co-Chairperson', name: 'Shreyas DB' },
       { role: 'Vice Chairperson', name: 'Nathan Daniel' },
-    ], agenda: null,
+    ], agenda: 'The Soviet-Afghan War, 1979\nFreeze date - 12th December, 1979',
     description: 'The Continuous Crisis Committee is a fast-paced, dynamic simulation where the situation evolves in real time. Delegates must respond to rapid developments, shifting alliances, and unexpected crises introduced by the crisis staff throughout the session. Adaptability, strategic thinking, and quick decision-making are the hallmarks of a successful CCC delegate.',
   },
   {
@@ -51,7 +51,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Aabid Maldar' },
       { role: 'Co-Chairperson', name: 'Ritobrata Sarkar' },
       { role: 'Vice Chairperson', name: 'Dhruv Kulkarni' },
-    ], agenda: null,
+    ], agenda: 'Addressing Gaps in the Regulation of Bio-Digital Weapons Systems',
     description: 'The Disarmament and Security Council addresses some of the most pressing threats to global stability — from the proliferation of weapons of mass destruction to conventional arms trafficking and emerging technologies in warfare. Delegates will craft frameworks for arms control, non-proliferation treaties, and cooperative security measures.',
   },
   {
@@ -60,16 +60,16 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Aara Shivani' },
       { role: 'Co-Chairperson', name: 'Srishti Singh' },
       { role: 'Moderator', name: 'Rohan' },
-    ], agenda: null,
+    ], agenda: 'Assessing the Impact of Escalating Tensions between the United States and Iran on the safety, well being, and rights of children',
     description: "UNICEF works in over 190 countries and territories to protect the rights of every child. At FISMUN'26, delegates will tackle critical issues affecting the world's most vulnerable population — including child labour, access to education, child soldiers, malnutrition, and the impact of conflict on children's welfare.",
   },
   {
     abbr: 'WHO', fullName: 'World Health Organization (Junior)',
     board: [
       { role: 'Co-Chairperson', name: 'Jerome Noble' },
-      { role: 'Co-Chairperson', name: 'Saniya Philip' },
+      { role: 'Co-Chairperson', name: 'Aaryan Patil' },
       { role: 'Moderator', name: 'Arjun' },
-    ], agenda: 'To Be Announced',
+    ], agenda: 'Guaranteeing fair access to vaccines and essential health services in low-income nations and areas affected by conflict.',
     description: 'The World Health Organization directs and coordinates international health within the United Nations system. Delegates will engage with global health crises, pandemic preparedness, equitable vaccine distribution, mental health policy, and the structural inequalities that determine health outcomes across nations.',
   },
   {
@@ -78,7 +78,7 @@ const COMMITTEES = [
       { role: 'Head Chairperson', name: 'Atul Tharian' },
       { role: 'Vice Chairperson', name: 'Suhani Bhuwania' },
       { role: 'Moderator', name: 'Muskaan Malik' },
-    ], agenda: 'To Be Announced',
+    ], agenda: 'Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy',
     description: 'The United Nations Commission on the Status of Women is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. Delegates will address systemic barriers, legislative gaps, and social norms that perpetuate inequality across the globe.',
   },
   {
@@ -87,7 +87,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shlok Shetty' },
       { role: 'Co-Chairperson', name: 'Shubh Bansal' },
       { role: 'Moderator', name: 'Teesha' },
-    ], agenda: 'To Be Announced',
+    ], agenda: 'Indonesian Mass Killings, 30th September 2025',
     description: "The Historical Crisis Committee places delegates in the shoes of historical decision-makers at a pivotal moment in history. With the benefit of hindsight stripped away, delegates must navigate the pressures, limited information, and competing interests of the era — reimagining how history's most defining crises could have unfolded differently.",
   },
 ]
@@ -515,6 +515,14 @@ function CommitteeDetail({ committee, onClose }) {
           <div className="cd-divider" />
         </div>
 
+        {/* Agenda */}
+        {committee.agenda && (
+          <div className="cd-section">
+            <div className="cd-section-lbl">Agenda</div>
+            <p className="cd-agenda">{committee.agenda}</p>
+          </div>
+        )}
+
         {/* Description */}
         <p className="cd-description">{committee.description}</p>
 
@@ -530,14 +538,6 @@ function CommitteeDetail({ committee, onClose }) {
                 </div>
               ))}
             </div>
-          </div>
-        )}
-
-        {/* Agenda */}
-        {committee.agenda && (
-          <div className="cd-section">
-            <div className="cd-section-lbl">Agenda</div>
-            <p className="cd-agenda">{committee.agenda}</p>
           </div>
         )}
 
@@ -794,11 +794,11 @@ function Register() {
           <div className="contact-section" id="contact">
             <h3 className="contact-title">CONTACT US</h3>
             <div className="contact-items">
-              <a href="mailto:freedominternationalschool@gmail.com" className="contact-item">
+              <a href="mailto:freedominternationalschoolmun@gmail.com" className="contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                 </svg>
-                freedominternationalschool@gmail.com
+                freedominternationalschoolmun@gmail.com
               </a>
               <a href="https://www.instagram.com/fis.mun?igsh=Z2g5Y29jNDZzeXZ3" target="_blank" rel="noopener noreferrer" className="contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -477,7 +477,12 @@ img, canvas { display: block; }
 }
 .c-agenda-txt {
   font-size: clamp(10px, 1.1vw, 12px);
-  line-height: 1.65; color: var(--cream-60);
+  line-height: 1.5; color: var(--cream);
+  background: rgba(74, 143, 226, 0.08);
+  border-left: 2px solid var(--blue);
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  white-space: pre-wrap;
 }
 .c-learn-more {
   margin-top: 16px;
@@ -1218,8 +1223,15 @@ img, canvas { display: block; }
 }
 
 .cd-agenda {
-  font-size: clamp(11px, 1.2vw, 13px);
-  color: var(--cream-60); letter-spacing: 0.04em;
+  font-size: clamp(12px, 1.3vw, 14px);
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  white-space: pre-wrap;
+  background: rgba(74, 143, 226, 0.08);
+  border-left: 3px solid var(--blue);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.6;
 }
 
 .cd-actions {
