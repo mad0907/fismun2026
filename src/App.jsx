@@ -285,6 +285,15 @@ function Nav() {
       initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 2.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
+      <motion.div
+        className="nav-logos"
+        initial={{ opacity: 0, x: -12 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 2.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="FISMUN" className="nav-logo-img" />
+        <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="nav-logo-img nav-logo-school" />
+      </motion.div>
       {NAV_LINKS.map(({ id, label }) => (
         <a key={id} href={`#${id}`} className={`nav-link${active === id ? ' active' : ''}`} onClick={e => go(e, id)}>{label}</a>
       ))}
@@ -776,16 +785,62 @@ function ShareButtons() {
 
 // ─── REGISTER ─────────────────────────────────────────────────
 function Register() {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <section id="register" className="register section page-section">
       <div className="register-inner">
         <FadeUp delay={0.08}><h2 className="register-title">STEP INTO<br />DIPLOMACY</h2></FadeUp>
         <FadeUp delay={0.16}><p className="register-sub">Join delegates from across the country for three days of world-class debate and diplomacy</p></FadeUp>
         <FadeUp delay={0.24}>
-          <motion.a href="#" className="btn-register"
-            whileHover={{ scale: 1.04, y: -4 }} whileTap={{ scale: 0.97 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 18 }}
-          >Register Now</motion.a>
+          <div className="register-btn-group">
+            <AnimatePresence mode="wait">
+              {!expanded ? (
+                <motion.button
+                  key="register-now"
+                  className="btn-register"
+                  onClick={() => setExpanded(true)}
+                  whileHover={{ scale: 1.04, y: -4 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+                  initial={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.85 }}
+                >Register Now</motion.button>
+              ) : (
+                <motion.div
+                  key="register-expanded"
+                  className="register-btn-expanded"
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.85 }}
+                  transition={{ type: 'spring', stiffness: 380, damping: 22 }}
+                >
+                  <motion.a
+                    href="https://forms.gle/s5nLLwbKFcjwgEby8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-register"
+                    whileHover={{ scale: 1.04, y: -4 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                  >Individual<br />Registration</motion.a>
+                  <motion.a
+                    href="https://forms.gle/AEThzbiQbr1WpDCF9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-register btn-register-outline"
+                    whileHover={{ scale: 1.04, y: -4 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                  >Delegation<br />Registration</motion.a>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </FadeUp>
         <FadeUp delay={0.34}>
           <ShareButtons />
@@ -842,7 +897,14 @@ function Register() {
 function Footer() {
   return (
     <footer className="footer" id="footer-contact">
-      <div><div className="footer-logo">FISMUN'26</div><div className="footer-tag">Bigger · Better · Bolder</div></div>
+      <div className="footer-brand">
+        <div className="footer-logos">
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="FISMUN" className="footer-logo-img" />
+          <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="footer-logo-school-img" />
+        </div>
+        <div className="footer-logo">FISMUN'26</div>
+        <div className="footer-tag">Bigger · Better · Bolder</div>
+      </div>
       <div className="footer-links">
         {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register'],['Contact','contact']].map(([l,id]) => (
           <a key={l} href={`#${id}`} className="footer-link">{l}</a>
