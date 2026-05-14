@@ -286,17 +286,24 @@ function Nav() {
       transition={{ delay: 2.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.div
-        className="nav-logos"
+        className="nav-logo-left"
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <img src={`${import.meta.env.BASE_URL}logo.png`} alt="FISMUN" className="nav-logo-img" />
-        <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="nav-logo-img nav-logo-school" />
       </motion.div>
       {NAV_LINKS.map(({ id, label }) => (
         <a key={id} href={`#${id}`} className={`nav-link${active === id ? ' active' : ''}`} onClick={e => go(e, id)}>{label}</a>
       ))}
+      <motion.div
+        className="nav-logo-right"
+        initial={{ opacity: 0, x: 12 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 2.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="nav-logo-img nav-logo-school" />
+      </motion.div>
     </motion.nav>
   )
 }
@@ -898,19 +905,21 @@ function Footer() {
   return (
     <footer className="footer" id="footer-contact">
       <div className="footer-brand">
-        <div className="footer-logos">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="FISMUN" className="footer-logo-img" />
-          <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="footer-logo-school-img" />
-        </div>
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="FISMUN" className="footer-logo-img" />
         <div className="footer-logo">FISMUN'26</div>
         <div className="footer-tag">Bigger · Better · Bolder</div>
       </div>
-      <div className="footer-links">
-        {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register'],['Contact','contact']].map(([l,id]) => (
-          <a key={l} href={`#${id}`} className="footer-link">{l}</a>
-        ))}
+      <div className="footer-center">
+        <div className="footer-links">
+          {[['Home','hero'],['About','secretariat'],['Committees','committees'],['Resources','coc'],['Register','register'],['Contact','contact']].map(([l,id]) => (
+            <a key={l} href={`#${id}`} className="footer-link">{l}</a>
+          ))}
+        </div>
+        <div className="footer-copy">© 2026 FISMUN. All rights reserved.</div>
       </div>
-      <div className="footer-copy">© 2026 FISMUN. All rights reserved.</div>
+      <div className="footer-school">
+        <img src={`${import.meta.env.BASE_URL}fis_Logo.png`} alt="Freedom International School" className="footer-logo-school-img" />
+      </div>
     </footer>
   )
 }
