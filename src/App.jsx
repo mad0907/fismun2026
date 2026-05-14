@@ -15,7 +15,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Anish G' },
       { role: 'Moderator', name: 'Aarnav Tejaswi' },
     ], agenda: 'The Situation in the Middle East',
-    description: 'The United Nations Security Council is the most powerful body within the UN system, bearing primary responsibility for the maintenance of international peace and security. At FISMUN\'26, delegates will simulate the deliberations of the 15-member council — navigating vetoes, drafting binding resolutions, and confronting crises that demand decisive multilateral action.',
+    description: 'The United Nations Security Council is the principal organ of the UN system charged with the maintenance of international peace and security. At FISMUN\'26, delegates will deliberate on one of the world\'s most volatile geopolitical flashpoints: the situation in the Middle East. Navigating competing alliances, ongoing humanitarian catastrophes, and the ever present weight of the veto, delegates must balance national interests against the collective responsibility to protect civilians and restore lasting stability to a region in crisis.',
   },
   {
     abbr: 'UNHRC', fullName: 'United Nations Human Rights Council',
@@ -25,7 +25,7 @@ const COMMITTEES = [
       { role: 'Vice Chairperson', name: 'Puneet' },
       { role: 'Moderator', name: 'Kenrick Roy' },
     ], agenda: 'Rights of the "Invisible": Addressing Statelessness and Nationality Deprivation in the Levant and Gulf Regions',
-    description: 'The United Nations Human Rights Council is the principal UN intergovernmental body responsible for strengthening the promotion and protection of human rights around the globe. Delegates will engage with contemporary violations, draft policy frameworks, and debate the balance between state sovereignty and universal human dignity.',
+    description: 'The United Nations Human Rights Council is the foremost intergovernmental forum dedicated to the protection and promotion of human rights across the globe. At FISMUN\'26, delegates will confront the deeply entrenched crisis of statelessness and nationality deprivation affecting millions across the Levant and Gulf regions. By examining the lives of those rendered legally invisible, delegates will craft binding frameworks to restore legal identity, dignity, and belonging to the world\'s most overlooked populations.',
   },
   {
     abbr: 'AIPPM', fullName: 'All India Political Parties Meet',
@@ -34,7 +34,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Anirudh R' },
       { role: 'Vice Chairperson', name: 'Parth Bakshi' },
     ], agenda: 'Deliberating upon the standard of bail as set in the Unlawful Activities (Prevention) Act with special reference to cases of national importance',
-    description: 'The All India Political Parties Meet simulates the unique and dynamic landscape of Indian parliamentary democracy. Delegates represent major national and regional political parties, debating pressing domestic policy issues — from economic reform and social justice to national security and federalism — in a distinctly Indian legislative style.',
+    description: 'The All India Political Parties Meet brings together representatives of India\'s diverse political spectrum to debate matters of pressing national concern. At FISMUN\'26, delegates will grapple with one of the most contested provisions in Indian law: the standard of bail under the Unlawful Activities (Prevention) Act in cases of national importance. With fundamental rights on one side and national security imperatives on the other, delegates must find a principled resolution to one of India\'s most consequential legal debates.',
   },
   {
     abbr: 'CCC', fullName: 'Continuous Crisis Committee',
@@ -43,7 +43,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shreyas DB' },
       { role: 'Vice Chairperson', name: 'Nathan Daniel' },
     ], agenda: 'The Soviet-Afghan War, 1979\nFreeze date - 12th December, 1979',
-    description: 'The Continuous Crisis Committee is a fast-paced, dynamic simulation where the situation evolves in real time. Delegates must respond to rapid developments, shifting alliances, and unexpected crises introduced by the crisis staff throughout the session. Adaptability, strategic thinking, and quick decision-making are the hallmarks of a successful CCC delegate.',
+    description: 'The Continuous Crisis Committee places delegates at the centre of a rapidly unfolding geopolitical emergency where the situation evolves in real time. Frozen on 12th December 1979, delegates will navigate the opening days of the Soviet intervention in Afghanistan, a crisis that would reshape global power dynamics for an entire generation. With incomplete intelligence, shifting loyalties, and mounting pressure from every direction, every decision made in committee carries consequences that reverberate through history.',
   },
   {
     abbr: 'DISEC', fullName: 'Disarmament and Security Council',
@@ -52,7 +52,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Ritobrata Sarkar' },
       { role: 'Vice Chairperson', name: 'Dhruv Kulkarni' },
     ], agenda: 'Addressing Gaps in the Regulation of Bio-Digital Weapons Systems',
-    description: 'The Disarmament and Security Council addresses some of the most pressing threats to global stability — from the proliferation of weapons of mass destruction to conventional arms trafficking and emerging technologies in warfare. Delegates will craft frameworks for arms control, non-proliferation treaties, and cooperative security measures.',
+    description: 'The Disarmament and International Security Committee confronts one of the most alarming frontiers in modern warfare: the unregulated development of biodigital weapons systems. Delegates will examine critical gaps in existing international law that leave the world exposed to weapons capable of targeting individuals, populations, and critical infrastructure through the convergence of biological and digital vectors. By drafting comprehensive regulatory frameworks, delegates will work to close these loopholes before such weapons shift from theoretical possibility to catastrophic reality.',
   },
   {
     abbr: 'UNICEF', fullName: "United Nations Children's Fund (Junior)",
@@ -61,7 +61,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Srishti Singh' },
       { role: 'Moderator', name: 'Rohan' },
     ], agenda: 'Assessing the Impact of Escalating Tensions between the United States and Iran on the safety, well being, and rights of children',
-    description: "UNICEF works in over 190 countries and territories to protect the rights of every child. At FISMUN'26, delegates will tackle critical issues affecting the world's most vulnerable population — including child labour, access to education, child soldiers, malnutrition, and the impact of conflict on children's welfare.",
+    description: "The United Nations Children's Fund stands as the world's foremost advocate for the rights and well being of children across every nation and territory. At FISMUN'26, delegates will assess the profound humanitarian impact of escalating geopolitical tensions between the United States and Iran on children caught in the crossfire. From access to education and healthcare to physical safety and psychological welfare, delegates will craft urgent policy responses to protect the most vulnerable in an increasingly volatile region.",
   },
   {
     abbr: 'WHO', fullName: 'World Health Organization (Junior)',
@@ -70,7 +70,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Aaryan Patil' },
       { role: 'Moderator', name: 'Arjun' },
     ], agenda: 'Guaranteeing fair access to vaccines and essential health services in low-income nations and areas affected by conflict.',
-    description: 'The World Health Organization directs and coordinates international health within the United Nations system. Delegates will engage with global health crises, pandemic preparedness, equitable vaccine distribution, mental health policy, and the structural inequalities that determine health outcomes across nations.',
+    description: 'The World Health Organization coordinates the global response to health emergencies and sets the international standards that shape healthcare for populations everywhere. At FISMUN\'26, delegates will confront the stark inequities preventing billions of people in lower income nations and conflict affected regions from accessing vaccines and essential health services. Delegates will design binding international commitments and sustainable funding mechanisms to transform the promise of universal health coverage into a lived reality for every person on the planet.',
   },
   {
     abbr: 'UNCSW', fullName: 'United Nations Commission on the Status of Women',
@@ -78,8 +78,8 @@ const COMMITTEES = [
       { role: 'Head Chairperson', name: 'Atul Tharian' },
       { role: 'Vice Chairperson', name: 'Suhani Bhuwania' },
       { role: 'Moderator', name: 'Muskaan Malik' },
-    ], agenda: 'Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy',
-    description: 'The United Nations Commission on the Status of Women is the principal global intergovernmental body exclusively dedicated to the promotion of gender equality and the empowerment of women. Delegates will address systemic barriers, legislative gaps, and social norms that perpetuate inequality across the globe.',
+    ], agenda: "Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy",
+    description: "The United Nations Commission on the Status of Women is the leading global body dedicated to advancing gender equality and the empowerment of women. Delegates at FISMUN’26 will engage with one of the most contested questions at the intersection of law, ethics, and human rights: whether restrictions on abortion can be legitimised under international human rights standards governing women’s rights and bodily autonomy. Through rigorous debate and careful deliberation, delegates will interrogate the obligations that states owe to women and examine the limits of legislative authority over the human body.",
   },
   {
     abbr: 'HCC', fullName: 'Historical Crisis Committee',
@@ -88,7 +88,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shubh Bansal' },
       { role: 'Moderator', name: 'Teesha' },
     ], agenda: 'Indonesian Mass Killings, 30th September 2025',
-    description: "The Historical Crisis Committee places delegates in the shoes of historical decision-makers at a pivotal moment in history. With the benefit of hindsight stripped away, delegates must navigate the pressures, limited information, and competing interests of the era — reimagining how history's most defining crises could have unfolded differently.",
+    description: "The Historical Crisis Committee immerses delegates in a pivotal and deeply troubling chapter of the twentieth century. Frozen at 30th September 1965, delegates will assume the roles of decision makers operating under extreme pressure, incomplete information, and conflicting loyalties as the Indonesian mass killings begin to unfold. The committee challenges participants to navigate Cold War geopolitics, military authority, and the politics of anticommunism as they confront a crisis that claimed hundreds of thousands of lives and reshaped an entire nation.",
   },
 ]
 
