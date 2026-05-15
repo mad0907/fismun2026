@@ -1317,3 +1317,9 @@ img, canvas { display: block; }
 }
 .cd-btn:active { transform: translateY(0); }
 .cd-btn svg { flex-shrink: 0; color: var(--blue); }
+.cd-btn-disabled {
+  opacity: 0.38; cursor: not-allowed;
+  border-color: rgba(74,143,226,0.22);
+  box-shadow: none;
+}
+.cd-btn-disabled:hover { background: linear-gradient(135deg, rgba(74,143,226,0.22) 0%, rgba(74,143,226,0.10) 100%); border-color: rgba(74,143,226,0.22); box-shadow: none; transform: none; }
