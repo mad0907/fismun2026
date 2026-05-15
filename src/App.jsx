@@ -15,7 +15,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Anish G' },
       { role: 'Moderator', name: 'Aarnav Tejaswi' },
     ], agenda: 'The Situation in the Middle East',
-    matrixUrl: null,
+    matrixUrl: 'https://docs.google.com/spreadsheets/d/1BBbh_c_bz5fdg4kCLbSQpqclGvehHk48mSb3-tn6FZo/edit?usp=sharing',
     description: 'The United Nations Security Council is the principal organ of the UN system charged with the maintenance of international peace and security. At FISMUN\'26, delegates will deliberate on one of the world\'s most volatile geopolitical flashpoints: the situation in the Middle East. Navigating competing alliances, ongoing humanitarian catastrophes, and the ever present weight of the veto, delegates must balance national interests against the collective responsibility to protect civilians and restore lasting stability to a region in crisis.',
   },
   {
