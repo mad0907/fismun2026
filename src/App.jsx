@@ -108,16 +108,6 @@ const STATS = [
   { target: 3,   suffix: '',   label: 'Days of Debate'     },
 ]
 
-const COC_RULES = [
-  { num: '01', text: 'Delegates must maintain professional decorum throughout all committee sessions and conference premises.' },
-  { num: '02', text: 'Western business formals are mandatory for all committee sessions. Smart casuals are permitted during non-committee hours.' },
-  { num: '03', text: 'All electronic devices must be kept on silent. Usage is permitted only for research purposes during committee.' },
-  { num: '04', text: 'Plagiarism, pre-written speeches, or submission of work not one\'s own is strictly prohibited and may lead to disqualification.' },
-  { num: '05', text: 'Delegates must be punctual. Repeated absences or late arrivals may result in loss of speaking rights.' },
-  { num: '06', text: 'No delegate may address the committee without recognition from the Chair.' },
-  { num: '07', text: 'Any form of harassment, bullying, or discrimination on any basis will result in immediate removal from the conference.' },
-  { num: '08', text: 'Delegates must carry their delegate badges and position papers at all times on conference premises.' },
-]
 
 // ─── LOGO WATERMARK (background ghost) ────────────────────────
 function LogoWatermark({ dim = false, size = 'min(560px, 84vw)' }) {
@@ -637,48 +627,13 @@ function Committees() {
   )
 }
 
-// ─── COC MODAL ────────────────────────────────────────────────
-function CocModal({ onClose }) {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    const onKey = e => { if (e.key === 'Escape') onClose() }
-    window.addEventListener('keydown', onKey)
-    return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', onKey) }
-  }, [onClose])
-  return (
-    <motion.div className="cd-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} onClick={onClose}>
-      <motion.div className="cd-panel" initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }} transition={{ type: 'spring', stiffness: 320, damping: 38, mass: 0.9 }} onClick={e => e.stopPropagation()}>
-        <button className="cd-close" onClick={onClose} aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-        </button>
-        <div className="cd-header">
-          <div className="cd-abbr">CODE OF CONDUCT</div>
-          <div className="cd-divider" />
-        </div>
-        <div className="coc-modal-grid">
-          {COC_RULES.map((r, i) => (
-            <motion.div key={r.num} className="coc-item"
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.04, duration: 0.4, ease: [0.22,1,0.36,1] }}
-            >
-              <div className="coc-num">{r.num}</div>
-              <p className="coc-rule">{r.text}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    </motion.div>
-  )
-}
-
 // ─── RESOURCES ────────────────────────────────────────────────
 const RESOURCE_TOP = [
   { emoji: '🌍', label: 'Country Matrix',    key: 'matrix' },
-  { emoji: '📋', label: 'Code of Conduct',   key: 'coc' },
+  { emoji: '📋', label: 'Code of Conduct',   key: 'coc',   href: 'https://drive.google.com/file/d/1FpiyI4yJp4gzh9Hiad9RYzR53XThT5jo/view?usp=sharing' },
 ]
 
 function Resources() {
-  const [cocOpen, setCocOpen] = useState(false)
   return (
     <>
       <section id="coc" className="resources section page-section">
@@ -690,17 +645,19 @@ function Resources() {
           <FadeUp delay={0.08}>
             <div className="res-top-row">
               {RESOURCE_TOP.map(r => (
-                <motion.button
+                <motion.a
                   key={r.key}
                   className="res-card"
-                  onClick={r.key === 'coc' ? () => setCocOpen(true) : undefined}
+                  href={r.href || '#'}
+                  target={r.href ? '_blank' : undefined}
+                  rel={r.href ? 'noopener noreferrer' : undefined}
                   whileHover={{ scale: 1.03, y: -4 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: 'spring', stiffness: 360, damping: 22 }}
                 >
                   <span className="res-card-emoji">{r.emoji}</span>
                   <span className="res-card-label">{r.label}</span>
-                </motion.button>
+                </motion.a>
               ))}
             </div>
           </FadeUp>
@@ -731,7 +688,6 @@ function Resources() {
           </motion.div>
         </div>
       </section>
-      <AnimatePresence>{cocOpen && <CocModal onClose={() => setCocOpen(false)} />}</AnimatePresence>
     </>
   )
 }
