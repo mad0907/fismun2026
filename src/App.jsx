@@ -629,7 +629,7 @@ function Committees() {
 
 // ─── RESOURCES ────────────────────────────────────────────────
 const RESOURCE_TOP = [
-  { emoji: '🌍', label: 'Country Matrix',    key: 'matrix' },
+  { emoji: '🌍', label: 'Portfolio Matrices', key: 'matrix', href: 'https://docs.google.com/document/d/1l3MEPxJgwCKz4zAydHOJZyxQZ3FiAydwl8bXpZkMaB8/edit?usp=sharing' },
   { emoji: '📋', label: 'Code of Conduct',   key: 'coc',   href: 'https://drive.google.com/file/d/1FpiyI4yJp4gzh9Hiad9RYzR53XThT5jo/view?usp=sharing' },
 ]
 
