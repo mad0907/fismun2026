@@ -46,7 +46,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shreyas DB' },
       { role: 'Vice Chairperson', name: 'Nathan Daniel' },
     ], agenda: 'The Soviet-Afghan War, 1979\nFreeze date - 12th December, 1979',
-    matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
+    matrixUrl: 'https://docs.google.com/spreadsheets/d/1kPKRQUJ_CLttQ5ALfqRzKIwdyR85k5dsro39ncvDz5A/edit?usp=sharing',
     description: 'The Continuous Crisis Committee places delegates at the centre of a rapidly unfolding geopolitical emergency where the situation evolves in real time. Frozen on 12th December 1979, delegates will navigate the opening days of the Soviet intervention in Afghanistan, a crisis that would reshape global power dynamics for an entire generation. With incomplete intelligence, shifting loyalties, and mounting pressure from every direction, every decision made in committee carries consequences that reverberate through history.',
   },
   {
@@ -96,7 +96,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shubh Bansal' },
       { role: 'Moderator', name: 'Teesha' },
     ], agenda: 'Indonesian Mass Killings, 30th September 2025',
-    matrixUrl: null,
+    matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
     description: "The Historical Crisis Committee immerses delegates in a pivotal and deeply troubling chapter of the twentieth century. Frozen at 30th September 1965, delegates will assume the roles of decision makers operating under extreme pressure, incomplete information, and conflicting loyalties as the Indonesian mass killings begin to unfold. The committee challenges participants to navigate Cold War geopolitics, military authority, and the politics of anticommunism as they confront a crisis that claimed hundreds of thousands of lives and reshaped an entire nation.",
   },
 ]
