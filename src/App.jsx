@@ -56,7 +56,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Ritobrata Sarkar' },
       { role: 'Vice Chairperson', name: 'Dhruv Kulkarni' },
     ], agenda: 'Addressing Gaps in the Regulation of Bio-Digital Weapons Systems',
-    matrixUrl: null,
+    matrixUrl: 'https://docs.google.com/spreadsheets/d/1i_z2d5TuV_3NI_bocjcrARrrtOR0MZK6OK8vsPDusFg/edit?usp=sharing',
     description: 'The Disarmament and International Security Committee confronts one of the most alarming frontiers in modern warfare: the unregulated development of biodigital weapons systems. Delegates will examine critical gaps in existing international law that leave the world exposed to weapons capable of targeting individuals, populations, and critical infrastructure through the convergence of biological and digital vectors. By drafting comprehensive regulatory frameworks, delegates will work to close these loopholes before such weapons shift from theoretical possibility to catastrophic reality.',
   },
   {
