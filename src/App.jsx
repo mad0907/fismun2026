@@ -12,7 +12,7 @@ const COMMITTEES = [
     abbr: 'UNSC', fullName: 'United Nations Security Council',
     board: [
       { role: 'Co-Chairperson', name: 'Krishna Iyer' },
-      { role: 'Co-Chairperson', name: 'Anish G' },
+      { role: 'Co-Chairperson', name: 'Alby Mathew' },
       { role: 'Moderator', name: 'Aarnav Tejaswi' },
     ], agenda: 'The Situation in the Middle East',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1BBbh_c_bz5fdg4kCLbSQpqclGvehHk48mSb3-tn6FZo/edit?usp=sharing',
