@@ -95,7 +95,7 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Shlok Shetty' },
       { role: 'Co-Chairperson', name: 'Shubh Bansal' },
       { role: 'Moderator', name: 'Teesha' },
-    ], agenda: 'Indonesian Mass Killings, 30th September 2025',
+    ], agenda: 'Indonesian Mass Killings, 30th September 1965',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
     description: "The Historical Crisis Committee immerses delegates in a pivotal and deeply troubling chapter of the twentieth century. Frozen at 30th September 1965, delegates will assume the roles of decision makers operating under extreme pressure, incomplete information, and conflicting loyalties as the Indonesian mass killings begin to unfold. The committee challenges participants to navigate Cold War geopolitics, military authority, and the politics of anticommunism as they confront a crisis that claimed hundreds of thousands of lives and reshaped an entire nation.",
   },
