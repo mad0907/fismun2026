@@ -83,7 +83,7 @@ const COMMITTEES = [
     abbr: 'UNCSW', fullName: 'United Nations Commission on the Status of Women',
     board: [
       { role: 'Head Chairperson', name: 'Atul Tharian' },
-      { role: 'Vice Chairperson', name: 'Suhani Bhuwania' },
+      { role: 'Vice Chairperson', name: 'Muskaan Malik' },
       { role: 'Moderator', name: 'Muskaan Malik' },
     ], agenda: "Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy",
     matrixUrl: "https://docs.google.com/spreadsheets/d/1R1dOh4NuP18N3pdgXMGq7klj52nu6eVD9KruGg5Dw5Q/edit?usp=sharing",
@@ -92,8 +92,8 @@ const COMMITTEES = [
   {
     abbr: 'HCC', fullName: 'Historical Crisis Committee',
     board: [
-      { role: 'Co-Chairperson', name: 'Shlok Shetty' },
-      { role: 'Co-Chairperson', name: 'Shubh Bansal' },
+       { role: 'Chairperson', name: 'Shubh Bansal' },
+      { role: 'vice-Chairperson', name: 'sai Juhith' },
       { role: 'Moderator', name: 'Teesha' },
     ], agenda: 'Indonesian Mass Killings, 30th September 1965',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
