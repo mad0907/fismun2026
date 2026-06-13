@@ -83,7 +83,7 @@ const COMMITTEES = [
     board: [
       { role: 'Head Chairperson', name: 'Atul Tharian' },
       { role: 'Vice Chairperson', name: 'Muskaan Malik' },
-      { role: 'Moderator', name: 'Muskaan Malik' },
+      { role: 'Moderator', name: 'Kenrick Roy' },
     ], agenda: "Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy",
     matrixUrl: "https://docs.google.com/spreadsheets/d/1R1dOh4NuP18N3pdgXMGq7klj52nu6eVD9KruGg5Dw5Q/edit?usp=sharing",
     description: "The United Nations Commission on the Status of Women is the leading global body dedicated to advancing gender equality and the empowerment of women. Delegates at FISMUN’26 will engage with one of the most contested questions at the intersection of law, ethics, and human rights: whether restrictions on abortion can be legitimised under international human rights standards governing women’s rights and bodily autonomy. Through rigorous debate and careful deliberation, delegates will interrogate the obligations that states owe to women and examine the limits of legislative authority over the human body.",
@@ -91,8 +91,8 @@ const COMMITTEES = [
   {
     abbr: 'HCC', fullName: 'Historical Crisis Committee',
     board: [
-       { role: 'Chairperson', name: 'Shubh Bansal' },
-      { role: 'vice-Chairperson', name: 'sai Juhith' },
+      { role: 'Chairperson', name: 'Shubh Bansal' },
+      { role: 'Vice Chairperson', name: 'Sai Juhith' },
       { role: 'Moderator', name: 'Teesha' },
     ], agenda: 'Indonesian Mass Killings, 30th September 1965',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
