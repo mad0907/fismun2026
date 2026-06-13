@@ -24,7 +24,6 @@ const COMMITTEES = [
       { role: 'Co-Chairperson', name: 'Kaushiik Nair' },
       { role: 'Co-Chairperson', name: 'Avaneesh Reddy' },
       { role: 'Vice Chairperson', name: 'Puneet' },
-      { role: 'Moderator', name: 'Kenrick Roy' },
     ], agenda: 'Rights of the "Invisible": Addressing Statelessness and Nationality Deprivation in the Levant and Gulf Regions',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1uAIaSWtmOxjqNI4ewR86uWtnKJkIXSyH/edit?usp=sharing&ouid=113444922102722481608&rtpof=true&sd=true',
     description: 'The United Nations Human Rights Council is the foremost intergovernmental forum dedicated to the protection and promotion of human rights across the globe. At FISMUN\'26, delegates will confront the deeply entrenched crisis of statelessness and nationality deprivation affecting millions across the Levant and Gulf regions. By examining the lives of those rendered legally invisible, delegates will craft binding frameworks to restore legal identity, dignity, and belonging to the world\'s most overlooked populations.',
