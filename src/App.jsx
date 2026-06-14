@@ -16,6 +16,7 @@ const COMMITTEES = [
       { role: 'Moderator', name: 'Aarnav Tejaswi' },
     ], agenda: 'The Situation in the Middle East',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1BBbh_c_bz5fdg4kCLbSQpqclGvehHk48mSb3-tn6FZo/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1V8554sl96Uti6qhF0U9Wd0i_a8QxwG1y/view?usp=sharing',
     description: 'The United Nations Security Council is the principal organ of the UN system charged with the maintenance of international peace and security. At FISMUN\'26, delegates will deliberate on one of the world\'s most volatile geopolitical flashpoints: the situation in the Middle East. Navigating competing alliances, ongoing humanitarian catastrophes, and the ever present weight of the veto, delegates must balance national interests against the collective responsibility to protect civilians and restore lasting stability to a region in crisis.',
   },
   {
@@ -26,6 +27,7 @@ const COMMITTEES = [
       { role: 'Vice Chairperson', name: 'Puneet' },
     ], agenda: 'Rights of the "Invisible": Addressing Statelessness and Nationality Deprivation in the Levant and Gulf Regions',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1uAIaSWtmOxjqNI4ewR86uWtnKJkIXSyH/edit?usp=sharing&ouid=113444922102722481608&rtpof=true&sd=true',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1L2D_B-et7eDx3yAjGSyKNYNrPyC8kxwd/view?usp=sharing',
     description: 'The United Nations Human Rights Council is the foremost intergovernmental forum dedicated to the protection and promotion of human rights across the globe. At FISMUN\'26, delegates will confront the deeply entrenched crisis of statelessness and nationality deprivation affecting millions across the Levant and Gulf regions. By examining the lives of those rendered legally invisible, delegates will craft binding frameworks to restore legal identity, dignity, and belonging to the world\'s most overlooked populations.',
   },
   {
@@ -36,6 +38,7 @@ const COMMITTEES = [
       { role: 'Vice Chairperson', name: 'Parth Bakshi' },
     ], agenda: 'Deliberating upon the standard of bail as set in the Unlawful Activities (Prevention) Act with special reference to cases of national importance',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/12EO76ejp0NbkWgUugQB4aiqwLMj01DcI5wJuMj6mPDI/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1nZznoINkS4C8FZAiprIkNEdZ7XxEmWFV/view?usp=sharing',
     description: 'The All India Political Parties Meet brings together representatives of India\'s diverse political spectrum to debate matters of pressing national concern. At FISMUN\'26, delegates will grapple with one of the most contested provisions in Indian law: the standard of bail under the Unlawful Activities (Prevention) Act in cases of national importance. With fundamental rights on one side and national security imperatives on the other, delegates must find a principled resolution to one of India\'s most consequential legal debates.',
   },
   {
@@ -46,6 +49,7 @@ const COMMITTEES = [
       { role: 'Vice Chairperson', name: 'Nathan Daniel' },
     ], agenda: 'The Soviet-Afghan War, 1979\nFreeze date - 12th December, 1979',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1kPKRQUJ_CLttQ5ALfqRzKIwdyR85k5dsro39ncvDz5A/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1cqYzNZZ3gH1Zg0-p42moKHGaoda9cA2l/view?usp=sharing',
     description: 'The Continuous Crisis Committee places delegates at the centre of a rapidly unfolding geopolitical emergency where the situation evolves in real time. Frozen on 12th December 1979, delegates will navigate the opening days of the Soviet intervention in Afghanistan, a crisis that would reshape global power dynamics for an entire generation. With incomplete intelligence, shifting loyalties, and mounting pressure from every direction, every decision made in committee carries consequences that reverberate through history.',
   },
   {
@@ -56,6 +60,7 @@ const COMMITTEES = [
       { role: 'Vice Chairperson', name: 'Dhruv Kulkarni' },
     ], agenda: 'Addressing Gaps in the Regulation of Bio-Digital Weapons Systems',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1i_z2d5TuV_3NI_bocjcrARrrtOR0MZK6OK8vsPDusFg/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1CYBKjX0wh9mgdRdRhyUKsPuC5-NYw2PU/view?usp=sharing',
     description: 'The Disarmament and International Security Committee confronts one of the most alarming frontiers in modern warfare: the unregulated development of biodigital weapons systems. Delegates will examine critical gaps in existing international law that leave the world exposed to weapons capable of targeting individuals, populations, and critical infrastructure through the convergence of biological and digital vectors. By drafting comprehensive regulatory frameworks, delegates will work to close these loopholes before such weapons shift from theoretical possibility to catastrophic reality.',
   },
   {
@@ -66,6 +71,7 @@ const COMMITTEES = [
       { role: 'Moderator', name: 'Rohan' },
     ], agenda: 'Assessing the Impact of Escalating Tensions between the United States and Iran on the safety, well being, and rights of children',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1sRJ9qFnx_4l2e2kK3sY_s0gEqcvIf7PEkhzfMMiFkQc/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1ZUF9BIQ9geKRyQQSFT1WjbBkdu2exKMH/view?usp=sharing',
     description: "The United Nations Children's Fund stands as the world's foremost advocate for the rights and well being of children across every nation and territory. At FISMUN'26, delegates will assess the profound humanitarian impact of escalating geopolitical tensions between the United States and Iran on children caught in the crossfire. From access to education and healthcare to physical safety and psychological welfare, delegates will craft urgent policy responses to protect the most vulnerable in an increasingly volatile region.",
   },
   {
@@ -76,6 +82,7 @@ const COMMITTEES = [
       { role: 'Moderator', name: 'Arjun' },
     ], agenda: 'Guaranteeing fair access to vaccines and essential health services in low-income nations and areas affected by conflict.',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1BeTTxCSP9vc8Vhae48kxBu_pXiS_pYiJJmvUButUtyo/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1lSI_as5mzpCRlNBhz8cawgg3aex7dz0J/view?usp=sharing',
     description: 'The World Health Organization coordinates the global response to health emergencies and sets the international standards that shape healthcare for populations everywhere. At FISMUN\'26, delegates will confront the stark inequities preventing billions of people in lower income nations and conflict affected regions from accessing vaccines and essential health services. Delegates will design binding international commitments and sustainable funding mechanisms to transform the promise of universal health coverage into a lived reality for every person on the planet.',
   },
   {
@@ -86,6 +93,7 @@ const COMMITTEES = [
       { role: 'Moderator', name: 'Kenrick Roy' },
     ], agenda: "Deliberating the Legitimacy of Abortion Restrictions in Light of International Human Rights Standards on Women’s Rights and Bodily Autonomy",
     matrixUrl: "https://docs.google.com/spreadsheets/d/1R1dOh4NuP18N3pdgXMGq7klj52nu6eVD9KruGg5Dw5Q/edit?usp=sharing",
+    backgroundGuideUrl: "https://drive.google.com/file/d/1u7LfhtmP2BWeCwzb_GUAD4MHnO5x3YDc/view?usp=sharing",
     description: "The United Nations Commission on the Status of Women is the leading global body dedicated to advancing gender equality and the empowerment of women. Delegates at FISMUN’26 will engage with one of the most contested questions at the intersection of law, ethics, and human rights: whether restrictions on abortion can be legitimised under international human rights standards governing women’s rights and bodily autonomy. Through rigorous debate and careful deliberation, delegates will interrogate the obligations that states owe to women and examine the limits of legislative authority over the human body.",
   },
   {
@@ -96,6 +104,7 @@ const COMMITTEES = [
       { role: 'Moderator', name: 'Teesha' },
     ], agenda: 'Indonesian Mass Killings, 30th September 1965',
     matrixUrl: 'https://docs.google.com/spreadsheets/d/1bpvYL1560qp4yZFANgrfMPa4HZmC4Qtp2jjtloHOmDc/edit?usp=sharing',
+    backgroundGuideUrl: 'https://drive.google.com/file/d/1CYBKjX0wh9mgdRdRhyUKsPuC5-NYw2PU/view?usp=sharing',
     description: "The Historical Crisis Committee immerses delegates in a pivotal and deeply troubling chapter of the twentieth century. Frozen at 30th September 1965, delegates will assume the roles of decision makers operating under extreme pressure, incomplete information, and conflicting loyalties as the Indonesian mass killings begin to unfold. The committee challenges participants to navigate Cold War geopolitics, military authority, and the politics of anticommunism as they confront a crisis that claimed hundreds of thousands of lives and reshaped an entire nation.",
   },
 ]
@@ -574,12 +583,21 @@ function CommitteeDetail({ committee, onClose }) {
               View Matrix
             </button>
           )}
-          <button className="cd-btn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-            </svg>
-            View Background Guide
-          </button>
+          {committee.backgroundGuideUrl ? (
+            <a href={committee.backgroundGuideUrl} target="_blank" rel="noopener noreferrer" className="cd-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              View Background Guide
+            </a>
+          ) : (
+            <button className="cd-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              View Background Guide
+            </button>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -669,20 +687,40 @@ function Resources() {
             variants={{ visible: { transition: { staggerChildren: 0.06, delayChildren: 0.05 } } }}
           >
             {COMMITTEES.map(c => (
-              <motion.button
-                key={c.abbr}
-                className="res-bg-card"
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22,1,0.36,1] } } }}
-                whileHover={{ scale: 1.03, y: -4 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: 'spring', stiffness: 360, damping: 22 }}
-              >
-                <div className="res-bg-card-inner">
-                  <span className="res-bg-abbr">{c.abbr}</span>
-                  <span className="res-bg-full">{c.fullName}</span>
-                </div>
-                <span className="res-bg-arrow">→</span>
-              </motion.button>
+              c.backgroundGuideUrl ? (
+                <motion.a
+                  key={c.abbr}
+                  className="res-bg-card"
+                  href={c.backgroundGuideUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22,1,0.36,1] } } }}
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 360, damping: 22 }}
+                >
+                  <div className="res-bg-card-inner">
+                    <span className="res-bg-abbr">{c.abbr}</span>
+                    <span className="res-bg-full">{c.fullName}</span>
+                  </div>
+                  <span className="res-bg-arrow">→</span>
+                </motion.a>
+              ) : (
+                <motion.button
+                  key={c.abbr}
+                  className="res-bg-card"
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22,1,0.36,1] } } }}
+                  whileHover={{ scale: 1.03, y: -4 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 360, damping: 22 }}
+                >
+                  <div className="res-bg-card-inner">
+                    <span className="res-bg-abbr">{c.abbr}</span>
+                    <span className="res-bg-full">{c.fullName}</span>
+                  </div>
+                  <span className="res-bg-arrow">→</span>
+                </motion.button>
+              )
             ))}
           </motion.div>
         </div>
